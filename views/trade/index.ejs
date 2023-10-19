@@ -1,0 +1,30 @@
+<%- include('../partials/header.ejs') %>
+    <div class = "content">
+        <div class = "background">
+            <div class = "sub">
+                <% if(trades.length){ %>
+                    <h1>Select a trade item</h2>
+                        <div class = "catego">
+                        <div class = "cate">
+                        <h2>Laptops</h2>
+                        <% trades.forEach(trade => { %>
+                            <% if(trade.Category.toString() == 'Laptops'){ %>
+                                <h3><a href="/trades/<%= trade._id %>"><%= trade.title %></a></h3>
+                                <% }}); %>
+                        </div>
+                        <div class = "cate">
+                        <h2 class = "cate">Mobiles</h2><br><br><br>
+                        <% trades.forEach(trade => { %>
+                            <% if(trade.Category.toString() == 'Mobiles'){ %>
+                                <h3><a href="/trades/<%= trade._id %>"><%= trade.title %></a></h3>
+                                <% }}); %>
+                            </div>
+                        </div>
+                    <% } else { %>
+                        
+                        <p>There are no trades to display.</p>
+                    <% } %>
+            </div>
+        </div>
+    </div>
+<%- include('../partials/footer.ejs') %>

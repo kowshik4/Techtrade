@@ -1,0 +1,45 @@
+<%- include('../partials/header.ejs')%>
+<div class = "content">
+    <div class = "background">
+        <div class = "sub">
+            <form action = '/trades' method = 'POST'>
+                <table>
+                    <tr>
+                        <td><label for="Category">Category</label></td>
+                        <td><select id="Category" name="Category" class = "fixed-width" required>
+                                <option value="Laptops">Laptops</option>
+                                <option value="Mobiles">Mobiles</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="title">Title</label></td>
+                        <td><input type="text" id="title" name="title" class = "fixed-width" required></td>
+                    </tr>
+                    <tr>
+                        <td class = "align-top"><label for="Details">Details</label></td>
+                        <td><textarea rows="5" id="Details" name="Details" class = "fixed-width" required minLength = "10" maxLength="300"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td><label for="Status">Status</label></td>
+                        <td><select id="Status" name="Status" class = "fixed-width" required>
+                                <option value="Available">Available</option>
+                                <option value="Unavailable">Unavailable</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="image" >Image URL</label></td>
+                        <td><input type="text" id="image" name="image" class = "fixed-width" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="Price">Price</label></td>
+                        <td><input type="number" id="Price" name="Price" class = "fixed-width" required></td>
+                    </tr>
+                </table> 
+                <button>Submit</button>       
+            </form>
+        </div>
+    </div>
+</div>
+<%- include('../partials/footer.ejs')%>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tech Trade</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <link rel="stylesheet" href="/css/style.css"> 
+    </head>
+    <body>
+        <div class = "cont">
+          <header class="header">
+            <a href = '/'><img src="https://tech-trade.ie/wp-content/uploads/2021/01/logo-tech-trade-ireland-2.png" width="160px" /></a>
+            <nav id="topnav">
+              <ul>
+                <li><a href='/trades/new'>Start Trading</a></li>
+                <%if(!user){%>
+                <li><a href='/users/login'>Login</a></li>
+                <li><a href='/users/new'>Sign Up</a></li>
+                <%}%>
+                <%if(user){%>
+                <li><a href='/users/profile'>Profile</a></li>
+                <li><a href='/users/logout'>Logout</a></li>
+                <%}%>
+              </ul>
+            </nav>
+          </header>
+          <nav id ="leftnav">
+            <ul>
+              <li><a href='/trades'>Trades</a></li>
+            </ul>
+          </nav>
+        </div>
+        
+        <% if(errorMessages.length > 0) {%>
+          <% errorMessages.forEach(message=>{%>
+              <div class='error'>
+                  <%=message%>
+              </div>
+              <%});%>
+                  <%}%>
+      
+                      <% if(successMessages.length > 0) {%>
+      
+                          <% successMessages.forEach(message=>{%>
+                              <div class='success'>
+                                  <%=message%>
+                              </div>
+                              <%});%>
+                                  <%}%>

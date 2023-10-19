@@ -1,0 +1,45 @@
+<%- include('../partials/header.ejs')%>
+    <div class = "content">
+        <div class = "background">
+            <div class = "sub">
+                <h2><%= trade.title %></h2>
+                <img src="<%= trade.image %>" alt="invalid url" width = "400px" >
+                <h3>Price $<%= trade.Price %></h3>
+                <h4>Posted at <%= trade.createdAt %> by <%= trade.author.firstName + '' + trade.author.lastName%> is now <%= trade.Status %></h4>
+                <div id="trade"><%= trade.Details %></div><br>
+                <%if(user== trade.author._id){%>
+                <form>
+                    <button type="submit" formmethod="GET" formaction="/trades/<%= trade._id %>/edit">Edit</button>
+                    <button type="submit" formmethod="POST" formaction="/trades/<%= trade._id %>?_method=DELETE">Delete</button>
+                </form>
+                <%}%>
+                <%if(trade.Saved===false){%>
+                    <form action="/trades/<%= trade._id%>/save" method="post">
+                      <label for="Name"></label><br/>
+                      <input
+                        type="hidden"
+                        id="Name"
+                        name="Name"
+                        value="<%= trade.title%>"
+                        required
+                      />
+                      <button type="submit">
+                        Watch
+                      </button>
+                    </form>
+                  <%}else{%>
+                    <form
+                    action="/trades/<%= trade._id%>/savedelete?_method=delete"
+                    method="post">
+                    <button type="submit">UnWatch</button>
+                  </form>
+                  <%}%>
+                    <%if(!(user== trade.author._id)&&trade.Status=="Available"){%>
+                    <form action="/trades/<%= trade._id%>/Trade" method="get">
+                      <button type="submit" class="trade-buttons">Trade</button>
+                    </form>
+                    <%}%>
+            </div>
+        </div>
+    </div>
+<%- include('../partials/footer.ejs') %>

@@ -1,0 +1,47 @@
+
+<%- include('../partials/header.ejs')%>
+<div class = "content">
+    <div class = "background">
+        <div class = "sub">
+            <form method="POST" action="/trades/<%= trade._id%>?_method=PUT">
+                <table>
+                    <tr>
+                        <td><label for="title" >Title</label></td>
+                        <td><input type="text" id="title" name="title" value = "<%= trade.title %>" class = "fixed-width" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="Category" >Category</label></td>
+                        <td><select id="Category" name="Category" class = "fixed-width" required>
+                            <option value="Laptops">Laptops</option>
+                            <option value="Mobiles">Mobiles</option>
+                            <%= trade.Category %></select>
+                        </td>
+                    </tr>
+                    <tr><td class = "align-top"><label for="Details">Details</label></td>
+                        <td><textarea rows="5" id="Details" name="Details" class = "fixed-width" required minLength = "10" maxLength="300"><%= trade.Details %></textarea></td>
+                    </tr>
+                    <tr>
+                        <td><label for="Status" >Status</label></td>
+                        <td><select id="Status" name="Status" class = "fixed-width" required>
+                            <option value="Available">Available</option>
+                            <option value="Unavailable">Unavailable</option>
+                            <%= trade.Status %></select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="image" >Image URL</label></td>
+                        <td><input type="text" id="image" name="image" value = "<%= trade.image %>" class = "fixed-width" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="Price" >Price</label></td>
+                        <td><input type="number" id="Price" name="Price" value = "<%= trade.Price %>" class = "fixed-width" required></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class = "align-right"><button>Submit</button></td>
+                    </tr>
+                    </table>        
+            </form>
+        </div>
+    </div>
+</div>
+ <%- include('../partials/footer.ejs')%>

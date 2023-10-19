@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+a {
+  text-decoration: none;
+}
+
+div.cont {
+  background-color: coral;
+  padding-bottom: 5px;
+}
+#leftnav {
+  margin-bottom: 5px;
+  padding-top: 6px;
+}
+
+#leftnav ul{
+  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  text-align: left;
+}
+
+#leftnav ul li a{
+  padding-left: 3%;
+  color:black;
+  text-decoration: none;
+  margin: 0px 5px;
+  padding: 5px;
+  display: inline;
+  text-align: left;
+}
+#leftnav ul li a:hover{
+  background-color:darkturquoise;
+  border-bottom: 3px solid grey;
+  transition: 50ms linear 0s;
+  -moz-transition: 50ms linear 0s;
+  -webkit-transition: 50ms linear 0s;
+}
+
+#topnav{
+  font-family: Arial, Helvetica, sans-serif;
+}
+#topnav ul{
+  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  text-align: right;
+  
+}
+#topnav ul li{
+  font-family: Arial, Helvetica, sans-serif;
+  list-style-type: none;
+  display: inline;
+  text-align: right;
+  border-right: 2px solid black;
+}
+#topnav ul li a{
+  color:black;
+  text-decoration: none;
+  margin: 0px 5px;
+  padding: 5px;
+  display: inline;
+}
+#topnav ul li a:hover{
+  background-color:darkturquoise;
+  border-bottom: 3px solid grey;
+  transition: 50ms linear 0s;
+  -moz-transition: 50ms linear 0s;
+  -webkit-transition: 50ms linear 0s;
+}
+
+#trades {
+  padding-left: 3%;
+  font-style: bold;
+}
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+  border-width: 3px;
+  
+}
+
+.container {
+  line-height: 150%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 32px;
+  background-color:coral;
+  border-bottom: 2px solid black;
+}
+
+.header h1 {
+  color: #222222;
+  font-size: 30px;
+  font-family: 'Pacifico', cursive;
+}
+
+hr.solid {
+  border-top: 2px solid black;
+}
+
+.footer .social a {
+  padding: 0 5px;
+  color:whitesmoke;
+  text-align: right;
+}
+
+nav.foot {
+  display: inline;
+  color:antiquewhite;
+  text-align: right;
+}
+
+.footer .foot a {
+  color:white;
+  display:inline-flex;
+}
+
+div.background {
+  background: url(bgimage.jpeg) repeat;
+  border: 2px solid black;
+  overflow: scroll;
+}
+
+div.content {
+  margin: 30px;
+  background-color: #ffffff;
+  border: 1px solid black;
+  opacity: 85%;
+  overflow: scroll;
+}
+
+div.content p {
+  margin: 5%;
+  font-weight: bold;
+  color: #000000;
+}
+
+div.subcont {
+  overflow: scroll;
+  padding-left: 5%;
+  margin: 5%;
+}
+
+div.subcont a {
+  text-align: left;
+  width: fit-content;
+}
+
+div.sub {
+  padding: 10%;
+  margin: 30px;
+  background-color: #ffffff;
+  border: 1px solid black;
+  opacity: 0.90;
+}
+
+div.subc {
+  padding: 10%;
+  opacity: 100%;
+  overflow: scroll;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+li a {
+  display: block;
+  color: #000;
+  padding: 8px 16px;
+  text-decoration: none;
+  text-align: right;
+}
+
+li a.active {
+  background-color: #84e4e2;
+  color: white;
+}
+
+li a:hover:not(.active) {
+  background-color: #29292a;
+  color: white;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  margin: 30px 0;
+}
+
+td,
+th {
+  border: 1px solid #111010;
+  padding: 8px;
+}
+
+tr:nth-child(1) {
+  background-color: #84e4e2;
+  color: rgb(14, 14, 14);
+}
+
+tr td i.fas {
+  display: block;
+  font-size: 35px;
+  text-align: center;
+}
+
+input[type=text], select, textarea {
+  width:90%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+  margin-right: 10%;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.col-25 {
+  float: left;
+  width: 20%;
+  margin-top: 6px;
+  margin-left: 5px
+}
+
+.col-75 {
+  float: left;
+  width: 70%;
+  margin-top: 6px;
+  margin-right: 5px
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
+.footer {
+  padding: 35px 20px;
+  background-color: #2e3550;
+  color: white;
+  text-align: left;
+}
+
+.catego {
+  display: flex;
+  overflow: scroll;
+  margin: 30px;
+
+}
+
+.cate {
+  width: 50%;
+  float: left;
+}
